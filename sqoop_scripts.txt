@@ -1,0 +1,13 @@
+sqoop import \
+  --connect "jdbc:mysql://sql12.freesqldatabase.com:3306/sql12230827" \
+  --username=sql12230827 \
+  --password=EHqKjkIBNZ \
+  --table emp \
+  --num-mappers 1 \
+    --as-textfile \
+  --target-dir=sqoopdata \
+  --incremental append \
+  --check-column emp_id \
+  --last-value 3 
+
+
